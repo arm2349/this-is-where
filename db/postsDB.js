@@ -81,18 +81,22 @@ function postsDB () {
             if (cityFilter === "All" && typeFilter === "All") {
                 res = await postsCol
                 .find()
+                .hint( {$natural : -1} )
                 .toArray();
             } else if (cityFilter !== "All" && typeFilter === "All") {
                 res = await postsCol
                 .find({ city: cityFilter })
+                .hint( {$natural : -1} )
                 .toArray();
             } else if (cityFilter === "All" && typeFilter !== "All") {
                 res = await postsCol
                 .find({ type: typeFilter })
+                .hint( {$natural : -1} )
                 .toArray();
             } else {
                 res = await postsCol
                 .find({ city: cityFilter, type: typeFilter })
+                .hint( {$natural : -1} )
                 .toArray();
             }
             return res.length;
