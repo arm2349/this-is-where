@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www.js",
-    "postinstall": "cd front && npm install && npm run build"
+    "postinstall": "cd frontend && npm install && npm run build"
   },
   "type": "module",
   "dependencies": {
