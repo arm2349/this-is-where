@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www.js",
-    "build": "react-scripts build"
+    "build": "npm install"
   },
   "type": "module",
   "dependencies": {
