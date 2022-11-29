@@ -5,8 +5,7 @@
   "scripts": {
     "start": "node ./bin/www.js",
     "build": "cd frontend && npm install && npm run build",
-    "prebuild": "rm -rf frontend/build",
-    "postinstall": "npm install -g serve && serve -s build"
+    "prebuild": "rm -rf frontend/build"
   },
   "type": "module",
   "dependencies": {
